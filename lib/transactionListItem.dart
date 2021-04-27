@@ -1,6 +1,7 @@
 import 'package:expense_app/transaction.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TransactionListItem extends StatelessWidget {
   final Transaction transaction;
@@ -36,7 +37,7 @@ class TransactionListItem extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
-                transaction.date.toString(),
+                DateFormat.yMMMd().format(transaction.date),
                 style: TextStyle(
                   color: Colors.grey,
                 ),
