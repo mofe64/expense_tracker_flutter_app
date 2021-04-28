@@ -7,10 +7,16 @@ class TransactionList extends StatelessWidget {
   TransactionList({this.userTransactions});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: userTransactions.map((transaction) {
-        return TransactionListItem(transaction: transaction);
-      }).toList(),
+    return Container(
+      height: 400,
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          return TransactionListItem(
+            transaction: userTransactions[index],
+          );
+        },
+        itemCount: userTransactions.length,
+      ),
     );
   }
 }
