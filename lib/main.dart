@@ -14,9 +14,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  // final List<Transaction> transactions = [
-
-  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +29,7 @@ class MyHomePage extends StatelessWidget {
                 child: Card(
                   color: Colors.blue,
                   child: Text('chart'),
-                  elevation: 5,
+                  elevation: 7,
                 ),
               ),
               UserTransactions(),
